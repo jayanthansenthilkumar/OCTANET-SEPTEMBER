@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #f0f4ff, #d1e7ff); /* Lighter blue gradient */
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 1200px; /* Increased container width */
+    margin: auto;
+    background: #ffffff; /* White background for the container */
+    padding: 40px; /* Increased padding for more space */
+    border-radius: 16px; /* Softer corners */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Softer shadow */
+}
+
+h1 {
+    text-align: center;
+    color: #2a4d69; /* Darker blue for headings */
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="date"], select {
+    padding: 10px;
+    border: 2px solid #2a4d69; /* Darker blue border */
+    border-radius: 8px;
+    margin-right: 10px;
+    flex-grow: 1;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, input[type="date"]:focus, select:focus {
+    border-color: #1e3a5f; /* Even darker blue on focus */
+    outline: none;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    background-color: #2a4d69; /* Dark blue button */
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-left: 10px; /* Space between buttons */
+}
+
+button:hover {
+    background-color: #1e3a5f; /* Darker blue on hover */
+    transform: translateY(-2px);
+}
+
+.filter {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.filter-btn {
+    margin: 0 5px;
+    padding: 8px 12px;
+    border: none;
+    background-color: #2a4d69; /* Dark blue filter buttons */
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-left: 10px; /* Space between filter buttons */
+}
+
+.filter-btn:hover {
+    background-color: #1e3a5f; /* Darker blue on hover */
+    transform: translateY(-2px);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    position: relative;
+    background-color: #f9f9f9; /* Light grey for task items */
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+li:hover {
+    transform: translateY(-2px);
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+li.low {
+    border-left: 5px solid #c3e6cb; /* Light green */
+}
+
+li.medium {
+    border-left: 5px solid #ffeeba; /* Light yellow */
+}
+
+li.high {
+    border-left: 5px solid #f5c6cb; /* Light red */
+}
+
+.edit-btn, .delete-btn {
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.edit-btn {
+    background-color: #2a4d69; /* Dark blue edit button */
+    color: white;
+}
+
+.delete-btn {
+    background-color: #dc3545; /* Red delete button */
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #1e3a5f;
+    transform: translateY(-2px);
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+}
+
+button#toggleThemeBtn {
+    background-color: #6c757d; /* Gray for toggle button */
+    margin-top: 10px;
+}
+
+.dark-mode {
+    background-color: #343a40; /* Dark background */
+    color: #ffffff;
+}
+
+.dark-mode input[type="text"], .dark-mode input[type="date"], .dark-mode select {
+    background-color: #495057; /* Dark input background */
+    color: #ffffff;
+    border: 2px solid #6c757d;
+}
+
+.dark-mode button {
+    background-color: #28a745; /* Green for dark mode button */
+}
+
+.dark-mode .filter-btn {
+    background-color: #007bff; /* Blue for dark mode filter button */
+}
